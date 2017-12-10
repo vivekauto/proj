@@ -4,7 +4,7 @@ pipeline {
     stage('Initialize') {
       steps {
         powershell 'get-service'
-        junit(testResults: '*.xml', allowEmptyResults: true)
+        junit(testResults: '*.xml')
       }
     }
   }
