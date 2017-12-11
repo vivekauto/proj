@@ -1,9 +1,9 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Initialize') {
-      agent{docker{image 'microsoft/WindowsServercore'}}
-      steps {  bat 'java --version'
+            steps {  bat 'java --version'
+                   bat 'docker pull nginx'
           }
     }
   }
