@@ -1,12 +1,9 @@
 pipeline {
-  agent{docker{image 'microsoft/iis'
-               args '-p 80:80'
-              }
-       }
+  agent none
   stages {
     stage('Initialize') {
-      steps {
-        powershell 'get-service'
+      agent{docker{image 'maven:3-alpine'}}
+      steps {  bat 'mvn --version'
           }
     }
   }
