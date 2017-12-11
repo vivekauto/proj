@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Initialize') {
             steps {  bat 'java --version'
-                   bat 'docker pull nginx'
+                   bat 'docker pull microsoft/WindowsServercore'
           }
     }
   }
