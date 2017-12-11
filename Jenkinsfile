@@ -1,6 +1,6 @@
 pipeline {
   agent{docker{image 'microsoft/iis'
-               args '-d -p 80:80'
+               args '-p 80:80'
               }
        }
   stages {
